@@ -36,7 +36,7 @@ s-portfolio（ラーメンWebアプリ）
 GitHubのこのリポジトリをクローン、またはZIPでダウンロードしてください。
 GitBashにて以下を入力。
 ```bash
-git clone https://github.com/sbt18hurang/s-portfolio.git
+git clone https://github.com/sbt18hurang/s-portfolio.git```
 
 ・Eclipseでプロジェクトを読み込む
 -Eclipseを起動
