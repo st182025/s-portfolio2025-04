@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ラーメンギャラリー</title>
+    <meta name="description" content="ラーメンの種類や特徴をご紹介">
+    <link rel="stylesheet" th:href="@{/css/ramenstyle.css}">
+  
+</head>
+
+<body class="ramen">
+    <!-- ヘッダー -->
+    <header class="header">
+        <h1>日本のラーメン</h1>
+    </header>
+
+    <!-- ナビゲーションバー（2段構成）-->
+	<nav class="navbar">
+	    <div class="row">
+	        <a href="/ramen/hokkaido" class="nav-button">北海道</a>
+	        <a href="/ramen/tohoku" class="nav-button">東北</a>
+	        <a href="/ramen/kanto" class="nav-button">関東</a>
+	        <a href="/ramen/chubu" class="nav-button">中部</a>
+	    </div>
+	    <div class="row">
+	        <a href="/ramen/kinki" class="nav-button">近畿</a>
+	        <a href="/ramen/chugoku" class="nav-button">中国</a>
+	        <a href="/ramen/shikoku" class="nav-button">四国</a>
+	        <a href="/ramen/kyushu" class="nav-button">九州・沖縄</a>
+	    </div>
+	</nav>
+
+    <h2 class="subtitle">日本のソウルフード、ここに集結。</h2>
+    <h3 class="oshi">Pick Up Gallery</h3>
+
+    <!-- 画像ギャラリー -->
+    <div class="gallery">
+        <div class="card">
+			<h4>札幌味噌ラーメン</h4>
+			<a href="/ramen/hokkaido">
+			      <img th:src="@{/img/ramen/hokkaido/hokkaido1.jpg}" alt="札幌味噌ラーメン"></a>
+			      <p>コク深い味噌が体にしみる<br>札幌ラーメン</p>
+			  
+        </div>
+        <div class="card">
+			<h4>博多豚骨ラーメン</h4>
+            <img th:src="@{/img/ramen/kyushu1.jpg}" alt="博多豚骨ラーメン">
+            <p>クリーミーな白濁スープの<br>豚骨ラーメン</p>
+        </div>
+        <div class="card">
+			<h4>東京醤油ラーメン</h4>
+            <img th:src="@{/img/ramen/shoyu1.jpg}" alt="東京醤油ラーメン">
+            <p>あっさり醤油と<br>中細ちぢれ麺の王道</p>
+        </div>
+    </div>
+
+    <!-- スクロールメッセージ（ここが動く） -->
+	<div id="message-container">
+	    <div id="movingText">全国のラーメンを一挙紹介。あなたの推しはどれ？
+		</div>
+	  </div>
+
+	   <script th:src="@{/js/message.js}" defer></script>
+
+
+    <!-- フッター -->
+    <footer>
+        <p>© 2025 Ramen Gallery</p>
+    </footer>
+	
+	<script src="/js/message.js" defer></script> 
+</body>
+
+</html>

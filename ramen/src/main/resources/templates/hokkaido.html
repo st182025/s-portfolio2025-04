@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<title>北海道ラーメン</title>
+	<link rel="stylesheet" th:href="@{/css/ramenstyle.css}">
+</head>
+
+<body class="ramen hokkaido">
+	<header class="header">
+
+		<h1>
+			<img th:src="@{/img/bg/hokkaidobg.png}" alt="北海道アイコン" class="icon-hokkaido">
+			北海道のラーメン
+		</h1>
+		<a th:href="@{/}" class="top-link">トップへ戻る</a>
+	</header>
+
+	<nav class="navbar">
+		<div class="row">
+			<a href="/ramen/hokkaido" class="nav-button">北海道</a>
+			<a href="/ramen/tohoku" class="nav-button">東北</a>
+			<a href="/ramen/kanto" class="nav-button">関東</a>
+			<a href="/ramen/chubu" class="nav-button">中部</a>
+		</div>
+		<div class="row">
+			<a href="/ramen/kinki" class="nav-button">近畿</a>
+			<a href="/ramen/chugoku" class="nav-button">中国</a>
+			<a href="/ramen/shikoku" class="nav-button">四国</a>
+			<a href="/ramen/kyushu" class="nav-button">九州・沖縄</a>
+		</div>
+	</nav>
+
+	<h2 class="subtitle">大地の味、北の風。</h2>
+
+	<div class="gallery">
+		<div class="card">
+			<h4>札幌味噌ラーメン</h4>
+			<img th:src="@{/img/ramen/hokkaido/hokkaido1.jpg}" alt="札幌味噌ラーメン">
+			<p>コク深い味噌が体にしみる札幌ラーメン</p>
+		</div>
+		<div class="card">
+			<h4>旭川醤油ラーメン</h4>
+			<img th:src="@{/img/ramen/hokkaido/hokkaido2.jpg}" alt="旭川醤油ラーメン">
+			<p>動物系と魚介系のWスープ。寒さに染みる、濃厚な醤油の香り。</p>
+		</div>
+		<div class="card">
+			<h4>函館塩ラーメン</h4>
+			<img th:src="@{/img/ramen/hokkaido/hokkaido3.jpg}" alt="函館塩ラーメン">
+			<p>透き通る塩スープが美しい。あっさりしながらも深いコク。</p>
+		</div>
+		<div class="card">
+			<h4>釧路ラーメン</h4>
+			<img th:src="@{/img/ramen/hokkaido/hokkaido4.jpg}" alt="釧路ラーメン">
+			<p>細ちぢれ麺が特徴。昆布と鶏ベースの優しい味わい。</p>
+		</div>
+		<div class="card">
+			<h4>室蘭カレーラーメン</h4>
+			<img th:src="@{/img/ramen/hokkaido/hokkaido5.jpg}" alt="室蘭カレーラーメン">
+			<p>ご当地グルメの進化系。とろみのあるスパイシーカレースープ。</p>
+		</div>
+		<div class="card">
+			<h4>留萌にしんラーメン</h4>
+			<img th:src="@{/img/ramen/hokkaido/hokkaido6.jpg}" alt="留萌にしんラーメン">
+			<p>甘露煮にしたにしんをトッピング。和の風味漂う一杯。</p>
+		</div>
+		<div class="card">
+			<h4>北見オホーツク塩ラーメン</h4>
+			<img th:src="@{/img/ramen/hokkaido/hokkaido7.jpg}" alt="北見オホーツクラーメン">
+			<p>オホーツク海沿岸の海産物を活かしたラーメンが特徴</p>
+		</div>
+		<div class="card">
+			<h4>登別地獄ラーメン</h4>
+			<img th:src="@{/img/ramen/hokkaido/hokkaido8.jpg}" alt="登別地獄ラーメン">
+			<p>地獄谷の名物<br>「地獄の○丁目」みたいに辛さレベルを選べるのが特徴</p>
+		</div>
+		<div class="card">
+			<h4>利尻ラーメン</h4>
+			<img th:src="@{/img/ramen/hokkaido/hokkaido9.jpg}" alt="利尻ラーメン">
+			<p>利尻昆布を使った和風スープと豚骨・鶏ガラの動物系スープをブレンド<br>
+				日本一行きにくいラーメン屋で有名</p>
+		</div>
+	</div>
+
+	<footer>
+		<p>© 2025 Ramen Gallery</p>
+	</footer>
+</body>
+
+</html>
