@@ -10,7 +10,7 @@ s-portfolio（ラーメンWebアプリ）
 - Oracle SQL（DB接続あり）
 
 ・画面イメージ
-![トップページのスクリーンショット](./screenshot.png)
+![トップページのスクリーンショット](./ramen/screenshot.png)
 
 ・起動方法（ローカル実行）
 このプロジェクトは Eclipse（Spring Tools）環境での実行を前提としています。
