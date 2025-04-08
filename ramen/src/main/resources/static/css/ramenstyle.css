@@ -160,13 +160,14 @@ body.kyushu {
     margin-bottom: 10px;
 }
 .ramen .card img {
-  width: 100%;
-  height: auto;
+  width: 270px;
+  height: 200px;
+  object-fit: cover;
   border-radius: 10px;
   border: 3px solid #ffd0b0;
-  margin-bottom: 8px;
+  margin: 0 auto 8px; /* 中央寄せ & 下に余白 */
+  display: block;     /* 中央寄せのために必要 */
 }
-
 /* --- スクロールメッセージ --- */
 #message-container {
   width: 100%;
@@ -192,4 +193,35 @@ body.kyushu {
   font-size: 0.9rem;
   color: #6d4c41;
   margin-top: auto;
+}
+
+/* タブレット以下（2列） */
+@media screen and (max-width: 999px) {
+  .ramen .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* スマホ以下（1列） */
+@media screen and (max-width: 699px) {
+  .ramen .gallery {
+    grid-template-columns: 1fr;
+  }
+}
+/* タブレット以下（例：画面幅 768px 以下） */
+@media screen and (max-width: 768px) {
+  .top-link {
+    font-size: 0.9rem;
+    padding: 6px 12px;
+    right: 20px; /* 右端の位置も少し内側に */
+  }
+}
+
+/* スマホ以下（例：画面幅 480px 以下） */
+@media screen and (max-width: 480px) {
+  .top-link {
+    font-size: 0.8rem;
+    padding: 4px 10px;
+    right: 15px;
+  }
 }
