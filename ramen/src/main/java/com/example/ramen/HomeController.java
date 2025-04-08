@@ -20,14 +20,33 @@ public class HomeController {
     public String tohokuPage() {
         return "tohoku";
     }
-    @GetMapping("/kyushu")
-    public String kyushuPage() {
-        return "kyushu";
-    }
-
     @GetMapping("/kanto")
     public String kantoPage() {
         return "kanto";
+    }
+    @GetMapping("/chubu")
+    public String chubuPage() {
+    	return "chubu";
+    }
+    @GetMapping("/niigata")
+    public String niigataPage() {
+    	return "niigata";
+    }
+    @GetMapping("/kinki")
+    public String kinkiPage() {
+    	return "kinki";
+    }
+    @GetMapping("/chugoku")
+    public String chugokuPage() {
+        return "chugoku"; 
+    }
+    @GetMapping("/shikoku")
+    public String shikokuPage() {
+        return "shikoku"; 
+    }
+    @GetMapping("/kyushu")
+    public String kyushuPage() {
+        return "kyushu";
     }
     //test2
     

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<title>中国ラーメン</title>
+	<link rel="stylesheet" th:href="@{/css/ramenstyle.css}">
+</head>
+
+<body class="ramen chugoku">
+	<header class="header">
+		<h1>
+			<img th:src="@{/img/bg/chugokubg.png}" alt="中国アイコン" class="icon-chugoku">
+			中国のラーメン
+		</h1>
+		<a th:href="@{/}" class="top-link">トップへ戻る</a>
+	</header>
+
+	<nav class="navbar">
+		<div class="row">
+			<a href="/ramen/hokkaido" class="nav-button">北海道</a>
+			<a href="/ramen/tohoku" class="nav-button">東北</a>
+			<a href="/ramen/kanto" class="nav-button">関東</a>
+			<a href="/ramen/chubu" class="nav-button">中部</a>
+		</div>
+		<div class="row">
+			<a href="/ramen/kinki" class="nav-button">近畿</a>
+			<a href="/ramen/chugoku" class="nav-button">中国</a>
+			<a href="/ramen/shikoku" class="nav-button">四国</a>
+			<a href="/ramen/kyushu" class="nav-button">九州・沖縄</a>
+		</div>
+	</nav>
+
+	<h2 class="subtitle">風味・趣き豊かなラーメン。</h2>
+
+	<div class="gallery">
+		<div class="card">
+			<h4>広島ラーメン</h4>
+			<img th:src="@{/img/ramen/chugoku/chugoku1.jpg}" alt="広島ラーメン">
+			<p>醤油ベースに特製タレを加えた<br>定番ラーメン</p>
+		</div>
+			<div class="card">
+				<h4>牛骨ラーメン</h4>
+				<img th:src="@{/img/ramen/chugoku/chugoku2.jpg}" alt="ラーメン">
+				<p>牛の香ばしさと甘味。<br>鳥取は倉吉・米子で有名</p>
+			</div>
+			<div class="card">
+				<h4>ばりそば</h4>
+				<img th:src="@{/img/ramen/chugoku/chugoku3.jpg}" alt="ラーメン">
+				<p>皿うどん風の下関名物<br>揚げ麺にあんかけがかかっている</p>
+			</div>
+	</div>
+
+	<footer>
+		<p>© 2025 Ramen Gallery</p>
+	</footer>
+</body>
+
+</html>

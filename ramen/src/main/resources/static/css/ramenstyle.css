@@ -22,29 +22,37 @@ body.ramen {
 
 /* --- 地方別背景 --- */
 body.hokkaido {
-  background: linear-gradient(90deg, #fff7f0, #ffe6dc, #fff7f0);
+  background: linear-gradient(90deg, #388e3c, #c8e6c9, #388e3c); /* 北海道：緑（両端濃い緑、中央淡い緑） */
 }
+
 body.tohoku {
-  background: linear-gradient(90deg, #fff6ed, #f2d9c3, #e8c4aa);
+  background: linear-gradient(90deg, #9c27b0, #e1bee7, #9c27b0); /* 東北：紫（両端濃い紫、中央淡い紫） */
 }
+
 body.kanto {
-  background: linear-gradient(90deg, #fff3f0, #ffd1c1, #ffc1b1);
+  background: linear-gradient(90deg, #ff7043, #ffccbc, #ff7043); /* 関東：オレンジ（両端濃いオレンジ、中央淡いオレンジ） */
 }
+
 body.chubu {
-  background: linear-gradient(90deg, #fff8e0, #ffe0b2, #ffd699);
+  background: linear-gradient(90deg, #8e2434, #f1c6c0, #8e2434); /* 中部：えんじ色（両端濃い、中央淡い） */
 }
+
 body.kinki {
-  background: linear-gradient(90deg, #fff0dc, #ffd8a8, #ffc07a);
+  background: linear-gradient(90deg, #fbc02d, #fff59d, #fbc02d); /* 近畿：金（両端濃い金、中央淡い金） */
 }
+
 body.chugoku {
-  background: linear-gradient(90deg, #fff2e6, #ffdfcc, #ffcbaa);
+  background: linear-gradient(90deg, #6d4c41, #d7ccc8, #6d4c41); /* 中国：薄茶（両端濃い茶色、中央淡い茶色） */
 }
+
 body.shikoku {
-  background: linear-gradient(90deg, #fff1e8, #ffd8d0, #ffc0b8);
+  background: linear-gradient(90deg, #1a237e, #9fa8da, #1a237e); /* 四国：群青（両端濃い群青、中央淡い群青） */
 }
+
 body.kyushu {
-  background: linear-gradient(90deg, #ffeae5, #ffcfc7, #ffbfb4);
+  background: linear-gradient(90deg, #d32f2f, #f8bbd0, #d32f2f); /* 九州：赤（両端濃い赤、中央淡い赤） */
 }
+
 
 
 /* --- ヘッダー --- */
@@ -87,9 +95,39 @@ body.kyushu {
     vertical-align: middle;
     margin-right: 12px;
 }
+.icon-kanto {
+    height: 4rem;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+.icon-chubu {
+    height: 4rem;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+.icon-kinki {
+    height: 3.5rem;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+.icon-chugoku {
+    height: 4rem;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+.icon-shikoku {
+    height: 4rem;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+.icon-kyushu {
+    height: 4.3rem;
+    vertical-align: middle;
+    margin-right: 10px;
+}
 /* --- ナビゲーションバー --- */
 .ramen nav {
-  background: linear-gradient(90deg, #e0f7fa, #b3e5fc, #e1f5fe);
+  background: linear-gradient(90deg, #e0f7fa, #b3e5fc, #e0f7fa);
   text-align: center;
   padding: 10px 0;
 }
@@ -123,9 +161,10 @@ body.kyushu {
 
 /* --- サブタイトル --- */
 .ramen .subtitle {
-  color: #bf360c;
+  color: #000;
   font-size: 1.5rem;
   margin-top: 20px;
+  font-family: 'メイリオ', 'MS Gothic', sans-serif;
 }
 .ramen .oshi {
   color: #400040;
@@ -135,13 +174,13 @@ body.kyushu {
 
 /* --- ギャラリー：常に3列固定 --- */
 .ramen .gallery {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex; /* ← gridからflexへ切り替え */
+  flex-wrap: wrap;
+  justify-content: center; /* ←中央揃えの主役 */
   gap: 30px;
   padding: 20px;
   max-width: 1200px;
   margin: 0 auto;
-  justify-items: center;
   box-sizing: border-box;
 }
 
@@ -185,7 +224,9 @@ body.kyushu {
   font-weight: bold;
   color: #000;
 }
-
+.shutten{
+	color: purple;
+}
 /* --- フッター --- */
 .ramen footer {
   background: linear-gradient(90deg, #e0f7fa, #e1f5fe);

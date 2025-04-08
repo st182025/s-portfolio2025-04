@@ -45,25 +45,27 @@
 		</div>
 		<div class="card">
 			<h4>博多豚骨ラーメン</h4>
-			<img th:src="@{/img/ramen/kyushu/kyushu1.jpg}" alt="博多豚骨ラーメン">
+			<a href="/ramen/kyushu">
+				<img th:src="@{/img/ramen/kyushu/kyushu1.jpg}" alt="博多豚骨ラーメン"></a>
 			<p>クリーミーな白濁スープの<br>豚骨ラーメン</p>
 		</div>
 		<div class="card">
 			<h4>喜多方ラーメン</h4>
-			<img th:src="@{/img/ramen/tohoku/tohoku1.jpg}" alt="ラーメン">
+			<a href="/ramen/tohoku">
+				<img th:src="@{/img/ramen/tohoku/tohoku1.jpg}" alt="喜多方ラーメン"></a>
 			<p> 平打ちの太ちぢれ麺<br>あっさり醤油スープ！</p>
 		</div>
 	</div>
 
 	<!-- スクロールメッセージ（ここが動く） -->
 	<div id="message-container">
-		<div id="movingText">全国のラーメンを一挙紹介。あなたの推しはどれ？
+		<div id="movingText">全国のラーメンを一挙紹介。あなたの推しはどれ？ 写真募集中！
 		</div>
 	</div>
 
 	<script th:src="@{/js/message.js}" defer></script>
 
-
+	<p class="shutten">画像出典:いらすとや、AdobeStock、photoAC、ChatGPT、GoogleGemini</p>
 	<!-- フッター -->
 	<footer>
 		<p>© 2025 Ramen Gallery</p>
