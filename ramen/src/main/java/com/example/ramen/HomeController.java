@@ -29,6 +29,6 @@ public class HomeController {
     public String kantoPage() {
         return "kanto";
     }
-    //test
+    //test2
     
 }
