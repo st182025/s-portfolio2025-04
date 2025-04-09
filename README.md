@@ -65,6 +65,7 @@ RamenApplication.java を右クリック
 http://localhost:8080/ramen/
 
 ☆画面遷移無し、画面表示のみのサンプル
+
 ・https://st182025.github.io/s-portfolio/html/home.html
 
 ・https://st182025.github.io/s-portfolio/html/hokkaido.html
