@@ -1,8 +1,16 @@
-package com.example.ramen;
+package com.example.ramen.controller;
 
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+
+import com.example.ramen.model.Area;
+import com.example.ramen.repository.AreaRepository;
+
+
 
 @Controller
 public class HomeController {
@@ -49,5 +57,13 @@ public class HomeController {
         return "kyushu";
     }
     //test2
-    
+
+    @Autowired
+    private AreaRepository areaRepository;
+    @GetMapping("/areas")
+    public String listAreas(Model model) {
+        List<Area> areas = areaRepository.findAll(); // 全件取得
+        model.addAttribute("areas", areas);          // HTMLに渡す
+        return "area-list";                          // area-list.html を表示
+    }
 }

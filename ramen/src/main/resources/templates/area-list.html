@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>エリア一覧</title>
+</head>
+<body>
+    <h1>エリア一覧</h1>
+    <ul>
+        <li th:each="area : ${areas}">
+            <span th:text="${area.name}">エリア名</span>
+        </li>
+    </ul>
+</body>
+</html>
