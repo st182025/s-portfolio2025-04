@@ -6,8 +6,10 @@ s-portfolio（ラーメンWebアプリ）
 
 ・使用技術
 
-Java（Spring Boot）
-HTML / CSS
+Java（Spring Boot）、
+
+HTML / CSS、
+
 Oracle SQL（DB接続あり）
 
 
