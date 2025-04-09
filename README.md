@@ -13,7 +13,8 @@ Oracle SQL（DB接続あり）
 
 ![トップページのスクリーンショット](./ramen/screenshot.png)
 
-・起動方法（ローカル実行） このプロジェクトは Eclipse（Spring Tools）環境での実行を前提としています。
+・起動方法（ローカル実行）
+このプロジェクトは Eclipse（Spring Tools）環境での実行を前提としています。
 
 ・手順要項：
 本リポジトリを clone または zip ダウンロード
