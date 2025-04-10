@@ -87,7 +87,14 @@ http://localhost:8080/ramen/
 https://st182025.github.io/s-portfolio2025-04/html/home.html
 
 ・北海道
+
 https://st182025.github.io/s-portfolio2025-04/html/hokkaido.html
 
 ・東北
+
 https://st182025.github.io/s-portfolio2025-04/html/tohoku.html
+
+・中部
+
+https://st182025.github.io/s-portfolio2025-04/html/chubu.html
+
