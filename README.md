@@ -78,11 +78,45 @@ RamenApplication.java を右クリック
 
 http://localhost:8080/ramen/
 
+<<<<<<< Updated upstream
 
 ☆画面遷移無し、画面表示のみのサンプル
+=======
+>>>>>>> Stashed changes
 
-・https://st182025.github.io/s-portfolio/html/home.html
 
-・https://st182025.github.io/s-portfolio/html/hokkaido.html
 
-・https://st182025.github.io/s-portfolio/html/tohoku.html
+Connections
+Hostname
+An internal hostname used by your Render services.
+
+dpg-cvr0kk15pdvs73e7371g-a
+
+Port
+5432
+
+Database
+ramendb_q3fz
+
+Username
+ramenuser
+
+Password
+A0ACGE2O916NqctStiJ5GXJgbAPxmsiW
+
+
+Internal Database URL
+postgresql://ramenuser:A0ACGE2O916NqctStiJ5GXJgbAPxmsiW@dpg-cvr0kk15pdvs73e7371g-a/ramendb_q3fz
+
+
+External Database URL
+postgresql://ramenuser:A0ACGE2O916NqctStiJ5GXJgbAPxmsiW@dpg-cvr0kk15pdvs73e7371g-a.singapore-postgres.render.com/ramendb_q3fz
+
+
+PSQL Command
+PGPASSWORD=A0ACGE2O916NqctStiJ5GXJgbAPxmsiW psql -h dpg-cvr0kk15pdvs73e7371g-a.singapore-postgres.render.com -U ramenuser ramendb_q3fz
+
+
+
+
+st182025.github.io
