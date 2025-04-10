@@ -28,11 +28,19 @@ Oracle SQL（DB接続あり）
 ・手順要項：
 
 本リポジトリを clone または zip ダウンロード
+
 Eclipse で ramen プロジェクトをインポート（Mavenプロジェクトとして）
+
 src/main/resources/application.properties にてDB接続等の設定を行う
+
 RamenApplication.java を右クリック → 「Spring Boot アプリケーションとして実行」
+
 http://localhost:8080 にアクセスして動作確認
-☆セットアップ手順（ローカル環境） このアプリは Java（Spring Boot）で構築されており、ローカル環境で起動・画面確認ができます。
+
+
+☆セットアップ手順（ローカル環境） 
+
+このアプリは Java（Spring Boot）で構築されており、ローカル環境で起動・画面確認ができます。
 以下の手順に従っていただければ、どなたでも画面遷移を確認できます。
 
 
@@ -42,6 +50,7 @@ Java 17 以上
 Eclipse（Spring Tools または Pleiades版推奨）
 Oracle Database（例：Oracle XE）
 Oracle JDBCドライバ（ojdbc8.jar など）
+
 ・当リポジトリをクローン GitHubのこのリポジトリをクローン、またはZIPでダウンロードしてください。 GitBashにて以下を入力。
 
 git clone https://github.com/sbt18hurang/s-portfolio.git
