@@ -78,11 +78,9 @@ RamenApplication.java を右クリック
 
 http://localhost:8080/ramen/
 
-<<<<<<< Updated upstream
+
 
 ☆画面遷移無し、画面表示のみのサンプル
-=======
->>>>>>> Stashed changes
 
 
 

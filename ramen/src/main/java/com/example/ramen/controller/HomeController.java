@@ -56,7 +56,7 @@ public class HomeController {
     public String kyushuPage() {
         return "kyushu";
     }
-    //test2
+    //test3
 
     @Autowired
     private AreaRepository areaRepository;
