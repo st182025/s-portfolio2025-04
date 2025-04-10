@@ -76,9 +76,11 @@ RamenApplication.java を右クリック
 
 ・ ブラウザで画面を確認
 
+
 以下のURLにアクセス：
 
 http://localhost:8080/ramen/
+
 
 
 
