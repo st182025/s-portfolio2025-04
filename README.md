@@ -41,7 +41,7 @@
 
 ---
 
- 2. GitHubからクローン
+2. GitHubからクローン
 
 Git Bash を開き、任意のディレクトリで以下を実行：
 
@@ -49,11 +49,13 @@ Git Bash を開き、任意のディレクトリで以下を実行：
 git clone https://github.com/your-username/ramen.git
 cd ramen
 
-
+___
 
 3. Eclipseでプロジェクトを読み込む
 
 Eclipseを起動し、「ファイル」→「インポート」→「既存の Maven プロジェクト」を選択し、ramen フォルダを指定する。プロジェクトが読み込まれたらビルドが完了するまで待つ。
+
+___
 
   4. PostgreSQLを準備する。pgAdmin または psql を使用する。  
 4-1. ターミナル（Git Bashなど）で psql に接続する。
@@ -74,6 +76,7 @@ INSERT INTO area_list (area_name, image_path, description) VALUES
 (‘北海道’, ‘/images/hokkaido.png’, ‘札幌味噌ラーメンが有名’),
 (‘東北’, ‘/images/tohoku.png’, ‘喜多方ラーメンなどが有名’);
 
+___
 5. application.properties を編集する。   src/main/resources/application.properties に以下の内容を貼り付ける。  
 spring.application.name=ramen
 server.port=8080
@@ -88,6 +91,7 @@ logging.level.org.hibernate.SQL=debug
 spring.jpa.properties.hibernate.format_sql=true
 spring.jpa.open-in-view=false
 
+___
 6. アプリケーションを実行する。
 
 6-1. Eclipseから起動する場合
@@ -96,11 +100,12 @@ src/main/java/com/example/ramen/RamenApplication.java を右クリックして�
 6-2. ターミナルから起動する場合（プロジェクトルートで）
 ./mvnw spring-boot:run
 ※ Windowsの場合は mvn spring-boot:run でも可
+___
 
-7. ブラウザで http://localhost:8080/ramen/ にアクセスし、トップページが表示されることを確認する。  
+7. ブラウザで 表示http://localhost:8080/ramen/ にアクセスし、トップページが表示されることを確認する。  
 
 
-
+___
 ☆画面遷移無し、画面表示のみのサンプル
 
 ・ホーム画面
