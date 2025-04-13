@@ -45,7 +45,6 @@
 
 Git Bash を開き、任意のディレクトリで以下を実行：
 
-```bash
 git clone https://github.com/your-username/ramen.git
 cd ramen
 
