@@ -56,7 +56,10 @@ Eclipseを起動し、「ファイル」→「インポート」→「既存の 
 
 ___
 
-  4. PostgreSQLを準備する。pgAdmin または psql を使用する。  
+  4. PostgreSQLを準備する。
+  
+  pgAdmin または psql を使用する。  
+
 4-1. ターミナル（Git Bashなど）で psql に接続する。
 psql -U postgres
 4-2. データベースを作成する。
@@ -76,7 +79,9 @@ INSERT INTO area_list (area_name, image_path, description) VALUES
 (‘東北’, ‘/images/tohoku.png’, ‘喜多方ラーメンなどが有名’);
 
 ___
-5. application.properties を編集する。   src/main/resources/application.properties に以下の内容を貼り付ける。  
+5. application.properties を編集する。
+
+src/main/resources/application.properties に以下の内容を貼り付ける。  
 spring.application.name=ramen
 server.port=8080
 server.servlet.context-path=/ramen
