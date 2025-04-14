@@ -25,6 +25,7 @@ public class QuizController {
     public QuizController(QuizService quizService) {
         this.quizService = quizService;
     }
+    //test
 
     // ホーム画面表示（home.html）
     @GetMapping("/home")
