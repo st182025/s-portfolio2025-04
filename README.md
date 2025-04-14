@@ -37,7 +37,7 @@
 - Eclipse（Spring Tools Suite または Pleiades）
 - PostgreSQL（ver 13 以上推奨）
 - pgAdmin または psql（PostgreSQL管理ツール）
--Git Bash
+- Git Bash
 
 ---
 
