@@ -1,98 +1,137 @@
-☆s-portfolio（ラーメンギャラリーWebアプリ）
 
-・概要 これは Spring Boot を使って開発した、日本の地方ごとのラーメンのギャラリーを表示するWebアプリです。
-ナビバーで画面遷移し、ギャラリーで写真やスクロールメッセージなどが見られます。
+☆ramen ギャラリー
+ポートフォリオ（Spring Boot + PostgreSQL）
 
+これは Spring Boot を使って開発した、日本の地方ごとのラーメンギャラリーを表示するWebアプリです。  
+ナビバーで画面遷移し、ギャラリーで写真やスクロールメッセージなどを楽しめます。
 
-・使用技術
+---
 
-Java（Spring Boot）、
+・ 使用技術
 
-HTML / CSS、
+- Java（Spring Boot）
+- HTML / CSS
+- PostgreSQL（DB接続あり）
 
-Oracle SQL（DB接続あり）
+---
 
+・ 画面イメージ
 
-・画面イメージ トップページ、関東ページのスクリーンショット
-
-![トップページのスクリーンショット](./ramen/screenshot.png)
-
+![トップページのスクリーンショット](./ramen/screenshot.png)  
 ![関東のスクリーンショット](./ramen/screenshot2.png)
 
+---
 
-・起動方法（ローカル実行）
+・ 起動方法（ローカル実行）
 
-このプロジェクトは Eclipse（Spring Tools）環境での実行を前提としています。
+このプロジェクトは Eclipse（Spring Tools Suite または Pleiades）環境での実行を前提としています。  
+以下の手順に従ってローカル環境でアプリを起動してください。
 
+---
 
-・手順要項：
+・セットアップ手順（ローカル環境）
 
-本リポジトリを clone または zip ダウンロード
+  1. 必要な環境
 
-Eclipse で ramen プロジェクトをインポート（Mavenプロジェクトとして）
+- Java 17 以上
+- Eclipse（Spring Tools Suite または Pleiades）
+- PostgreSQL（ver 13 以上推奨）
+- pgAdmin または psql（PostgreSQL管理ツール）
+- Git Bash
 
-src/main/resources/application.properties にてDB接続等の設定を行う
+---
 
-RamenApplication.java を右クリック → 「Spring Boot アプリケーションとして実行」
+2. GitHubからクローン
 
-http://localhost:8080 にアクセスして動作確認
+Git Bash を開き、任意のディレクトリで以下を実行：
 
+git clone https://github.com/your-username/ramen.git
+cd ramen
 
-☆セットアップ手順（ローカル環境） 
+___
 
-このアプリは Java（Spring Boot）で構築されており、ローカル環境で起動・画面確認ができます。
-以下の手順に従っていただければ、どなたでも画面遷移を確認できます。
+3. Eclipseでプロジェクトを読み込む
 
+Eclipseを起動し、「ファイル」→「インポート」→「既存の Maven プロジェクト」を選択し、ramen フォルダを指定する。プロジェクトが読み込まれたらビルドが完了するまで待つ。
 
-・前提条件（インストールが必要なもの）
+___
 
-Java 17 以上
-Eclipse（Spring Tools または Pleiades版推奨）
-Oracle Database（例：Oracle XE）
-Oracle JDBCドライバ（ojdbc8.jar など）
+  4. PostgreSQLを準備する。
+  
+  pgAdmin または psql を使用する。  
 
-・当リポジトリをクローン GitHubのこのリポジトリをクローン、またはZIPでダウンロードしてください。 GitBashにて以下を入力。
+4-1. ターミナル（Git Bashなど）で psql に接続する。
 
-git clone https://github.com/sbt18hurang/s-portfolio.git
+psql -U postgres
 
+4-2. データベースを作成する。
 
-・Eclipseでプロジェクトを読み込む
+CREATE DATABASE ramen_db;
 
--Eclipseを起動
--「ファイル」→「インポート」→「既存の Maven プロジェクト」
--フォルダ s-portfolio/ramen を選択
--プロジェクトが読み込まれたらビルド完了を待つ
+4-3. 作成したデータベースに接続する。
 
-・Oracle DBの設定を確認
-src/main/resources/application.properties に、以下のようにDB接続情報を記述します。
+\c ramen_db;
 
-spring.datasource.url=jdbc:oracle:thin:@localhost:1521/XEPDB1
-spring.datasource.username=YOUR_USERNAME
-spring.datasource.password=YOUR_PASSWORD
-spring.datasource.driver-class-name=oracle.jdbc.OracleDriver
-spring.jpa.database-platform=org.hibernate.dialect.Oracle12cDialect
-spring.jpa.hibernate.ddl-auto=none
-spring.jpa.show-sql=true
+4-4. テーブル area_list を作成する。
 
-・アプリを実行する
+CREATE TABLE area_list (
+id SERIAL PRIMARY KEY,
+area_name VARCHAR(100),
+image_path VARCHAR(255),
+description TEXT
+);
 
-RamenApplication.java を右クリック
+4-5. サンプルデータを挿入する（任意）。
 
-「Spring Boot アプリケーションとして実行」を選択
+INSERT INTO area_list (area_name, image_path, description) VALUES
+(‘北海道’, ‘/images/hokkaido.png’, ‘札幌味噌ラーメンが有名’),
+(‘東北’, ‘/images/tohoku.png’, ‘喜多方ラーメンなどが有名’);
 
-コンソールに Started RamenApplication と出れば成功。
+___
+5. application.properties を編集する。
 
+src/main/resources/application.properties に以下の内容を貼り付ける。 
 
-・ ブラウザで画面を確認
+spring.application.name=ramen
 
+server.port=8080
 
-以下のURLにアクセス：
+server.servlet.context-path=/ramen
 
-http://localhost:8080/ramen/
+spring.datasource.url=jdbc:postgresql://localhost:5432/ramen_db
 
+spring.datasource.username=postgres
 
+spring.datasource.password=systemttt
 
+spring.datasource.driver-class-name=org.postgresql.Driver
 
+spring.jpa.hibernate.ddl-auto=update
+
+spring.jpa.database-platform=org.hibernate.dialect.PostgreSQLDialect
+
+logging.level.org.hibernate.SQL=debug
+
+spring.jpa.properties.hibernate.format_sql=true
+
+spring.jpa.open-in-view=false
+
+___
+6. アプリケーションを実行する。
+
+6-1. Eclipseから起動する場合
+
+src/main/java/com/example/ramen/RamenApplication.java を右クリックして「Spring Boot アプリケーションとして実行」を選択する。
+
+6-2. ターミナルから起動する場合（プロジェクトルートで）
+
+./mvnw spring-boot:run
+ ※ Windowsの場合は mvn spring-boot:run でも可
+___
+
+7. ブラウザで 表示http://localhost:8080/ramen/ にアクセスし、トップページが表示されることを確認する。  
+
+___
 ☆画面遷移無し、画面表示のみのサンプル
 
 ・ホーム画面
