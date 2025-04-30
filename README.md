@@ -5,7 +5,7 @@
 これは Spring Boot を使って開発した、日本の地方ごとのラーメンギャラリーを表示するWebアプリです。  
 ナビバーで画面遷移し、ギャラリーで写真やスクロールメッセージなどを楽しめます。
 
----
+--
 
 ・ 使用技術
 
@@ -13,21 +13,21 @@
 - HTML / CSS
 - PostgreSQL（DB接続あり）
 
----
+--
 
 ・ 画面イメージ
 
 ![トップページのスクリーンショット](./ramen/screenshot.png)  
 ![関東のスクリーンショット](./ramen/screenshot2.png)
 
----
+--
 
 ・ 起動方法（ローカル実行）
 
 このプロジェクトは Eclipse（Spring Tools Suite または Pleiades）環境での実行を前提としています。  
 以下の手順に従ってローカル環境でアプリを起動してください。
 
----
+--
 
 ・セットアップ手順（ローカル環境）
 
@@ -39,7 +39,7 @@
 - pgAdmin または psql（PostgreSQL管理ツール）
 - Git Bash
 
----
+--
 
 2. GitHubからクローン
 
@@ -48,13 +48,13 @@ Git Bash を開き、任意のディレクトリで以下を実行：
 git clone https://github.com/your-username/ramen.git
 cd ramen
 
-___
+__
 
 3. Eclipseでプロジェクトを読み込む
 
 Eclipseを起動し、「ファイル」→「インポート」→「既存の Maven プロジェクト」を選択し、ramen フォルダを指定する。プロジェクトが読み込まれたらビルドが完了するまで待つ。
 
-___
+__
 
   4. PostgreSQLを準備する。
   
@@ -87,7 +87,8 @@ INSERT INTO area_list (area_name, image_path, description) VALUES
 (‘北海道’, ‘/images/hokkaido.png’, ‘札幌味噌ラーメンが有名’),
 (‘東北’, ‘/images/tohoku.png’, ‘喜多方ラーメンなどが有名’);
 
-___
+__
+
 5. application.properties を編集する。
 
 src/main/resources/application.properties に以下の内容を貼り付ける。 
@@ -116,7 +117,7 @@ spring.jpa.properties.hibernate.format_sql=true
 
 spring.jpa.open-in-view=false
 
-___
+__
 6. アプリケーションを実行する。
 
 6-1. Eclipseから起動する場合
@@ -127,11 +128,11 @@ src/main/java/com/example/ramen/RamenApplication.java を右クリックして�
 
 ./mvnw spring-boot:run
  ※ Windowsの場合は mvn spring-boot:run でも可
-___
+__
 
 7. ブラウザで 表示http://localhost:8080/ramen/ にアクセスし、トップページが表示されることを確認する。  
 
-___
+__
 ☆画面遷移無し、画面表示のみのサンプル
 
 ・ホーム画面
