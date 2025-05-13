@@ -10,7 +10,7 @@
 ・ 使用技術
 
 - Java（Spring Boot）
-- HTML / CSS
+- HTML / CSS / JavaScript
 - PostgreSQL（DB接続あり）
 
 --
